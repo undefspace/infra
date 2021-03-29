@@ -1,0 +1,78 @@
+{
+  "nodes": {
+    "nixops": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "utils": "utils"
+      },
+      "locked": {
+        "lastModified": 1616804507,
+        "narHash": "sha256-ecaulb505nCHWlOdw9fmFjLTsLB56f2t1hAmL/PZmqk=",
+        "owner": "cab404",
+        "repo": "nixops",
+        "rev": "36825c803cddbf6804e6389b8ee426c7525fd388",
+        "type": "github"
+      },
+      "original": {
+        "owner": "cab404",
+        "ref": "patch-1",
+        "repo": "nixops",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1616527350,
+        "narHash": "sha256-VkMevY2WLU+K7T/P4wVj18Ms8zyeRfp05ILf556m5Y8=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "d3f7e969b9860fb80750147aeb56dab1c730e756",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "nixops": "nixops",
+        "nixpkgs": "nixpkgs",
+        "secrets": "secrets"
+      }
+    },
+    "secrets": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-crethiRG/882NEE3ldnHGbGZVCijELb/mphsnVHC6dY=",
+        "path": "/home/cab/data/cab/undefspace/infra/secret",
+        "type": "path"
+      },
+      "original": {
+        "id": "undefspace-secrets",
+        "type": "indirect"
+      }
+    },
+    "utils": {
+      "locked": {
+        "lastModified": 1610051610,
+        "narHash": "sha256-U9rPz/usA1/Aohhk7Cmc2gBrEEKRzcW4nwPWMPwja4Y=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "3982c9903e93927c2164caa727cd3f6a0e6d14cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
