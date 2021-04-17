@@ -53,6 +53,7 @@ in {
 
     mosquitto = e // {
       checkPasswords = true;
+      host = "0.0.0.0";
       users = {
         ${mqttUsername} = {
           acl = [ "topic readwrite #" ];
