@@ -30,6 +30,7 @@ in {
       config = {
         frontend = { };
         mobile_app = { };
+        api = { };
 
         homeassistant = {
           name = "undefspace";
