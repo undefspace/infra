@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, all-secrets, ... }:
 let
   usecrets = pkgs.secrets.undef;
   mqttUsername = "undef";
@@ -23,7 +23,7 @@ in {
         installCheckPhase = ":";
       })).override {
         extraComponents =
-          [ "esphome" "mpd" "mobile_app" "frontend" "history" "mqtt" ];
+          [ "ipp" "esphome" "mpd" "mobile_app" "frontend" "history" "mqtt" ];
       };
       autoExtraComponents = false;
 
