@@ -4,11 +4,14 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixops.url = "github:cab404/nixops/patch-1";
     nixops.inputs.nixpkgs.follows = "nixpkgs";
+    tg-bot.url = "github:undefspace/tg-bot";
+    tg-bot.inputs.nixpkgs.follows = "nixpkgs";
+
     secrets.flake = false;
     secrets.url = "flake:undefspace-secrets";
   };
 
-  outputs = inputs @ { self, nixpkgs, nixops, secrets, ... }: {
+  outputs = inputs @ { self, nixpkgs, nixops, secrets, tg-bot, ... }: {
     nixopsConfigurations =
       let
         locsec = import "${secrets}/secrets.nix";
@@ -35,7 +38,12 @@
             (self: super: { secrets = import "${secrets}/secrets.nix"; })
           ];
 
-          imports = [ ./undef "${secrets}/wg.nix" ];
+          services.undefspace-tg-bot = {
+            enable = true;
+            config = "/var/secrets/tg-bot";
+          };
+
+          imports = [ ./undef "${secrets}/wg.nix" tg-bot.nixosModule.x86_64-linux ];
         };
 
       };
