@@ -27,29 +27,33 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1616804507,
-        "narHash": "sha256-ecaulb505nCHWlOdw9fmFjLTsLB56f2t1hAmL/PZmqk=",
-        "owner": "cab404",
+        "lastModified": 1627573982,
+        "narHash": "sha256-om60OW10V8w5YP4di9BFZngFCBt9TgnKNnoi29W5KBo=",
+        "owner": "nixos",
         "repo": "nixops",
-        "rev": "36825c803cddbf6804e6389b8ee426c7525fd388",
+        "rev": "ba05fe50ce09d8ebd37d0ffe04a4cfb822be98dd",
         "type": "github"
       },
       "original": {
-        "owner": "cab404",
-        "ref": "patch-1",
+        "owner": "nixos",
         "repo": "nixops",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "narHash": "sha256-MDrFCem5UGv6BbMKEL3+4jhE2U67EF1QS2qQXk5B66k=",
-        "path": "/home/cab/data/cab/nixpkgs",
-        "type": "path"
+        "lastModified": 1627714638,
+        "narHash": "sha256-K50HjZJzRaFoxzGkbNwynsrKGQsinmUQE5HNSCNcO6Y=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "11c662074e2ae3dddd7e157918b6981de4ce7857",
+        "type": "github"
       },
       "original": {
-        "path": "/home/cab/data/cab/nixpkgs",
-        "type": "path"
+        "owner": "nixos",
+        "ref": "nixos-21.05",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "nixpkgs_2": {
@@ -95,11 +99,11 @@
         "utils": "utils_2"
       },
       "locked": {
-        "lastModified": 1619089185,
-        "narHash": "sha256-g5IiFp6a+a2xPw9KPYAv6dn4uzAi0XjVRSLOUpUuXKs=",
+        "lastModified": 1623590663,
+        "narHash": "sha256-ggKv5MjaWWXy/TMurQf8DfCAzo9HeAcVE51qfeJ/KWQ=",
         "owner": "undefspace",
         "repo": "tg-bot",
-        "rev": "561f59e08c36ff98d93cce6922e67d75cc2db027",
+        "rev": "c7b268f632a68ae44a2856c89cbb6504673070cd",
         "type": "github"
       },
       "original": {

@@ -34,11 +34,6 @@
 
     # Retroarch on a main screen
     flatpak = e;
-    cage = e // {
-      # extraArguments = [ "-s" ];
-      program = "${pkgs.flatpak}/bin/flatpak run org.libretro.RetroArch";
-      user = "undef";
-    };
 
     openssh = e // {
       banner = ";; u n d e f s p a c e   w e l c o m e s   y o u ;;\n";

@@ -1,8 +1,8 @@
 {
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixops.url = "github:cab404/nixops/patch-1";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-21.05";
+    nixops.url = "github:nixos/nixops";
     nixops.inputs.nixpkgs.follows = "nixpkgs";
     tg-bot.url = "github:undefspace/tg-bot";
     tg-bot.inputs.nixpkgs.follows = "nixpkgs";
@@ -28,14 +28,24 @@
           users.users.root.openssh.authorizedKeys.keys = locsec.sshKeys;
         };
 
+
+        network.storage.legacy = {
+          databasefile = "~/.nixops/deployments.nixops";
+        };
+
         undef = {
+
           deployment = {
-            targetHost = "10.0.10.8";
+            targetHost = "10.98.6.59";#"10.98.32.44";#"10.0.10.8";
+            hasFastConnection = true;
           };
 
           # Ouch.
           nixpkgs.overlays = [
-            (self: super: { secrets = import "${secrets}/secrets.nix"; })
+            (self: super: {
+              secrets = import "${secrets}/secrets.nix";
+              all-secrets = secrets;
+            })
           ];
 
           services.undefspace-tg-bot = {
