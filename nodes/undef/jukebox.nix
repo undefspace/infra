@@ -54,8 +54,9 @@
 
   services.shairport-sync = {
     enable = true;
-    arguments = "-a 'undefaudio' -o pa -S soxr -Mg";
+    arguments = "-a 'undefaudio' -o pw -S soxr -Mg";
   };
+  users.users.shairport.extraGroups = [ "pipewire" ];
   systemd.services.shairport-sync.environment."PULSE_SERVER" = "tcp:0:4713";
 
 }
