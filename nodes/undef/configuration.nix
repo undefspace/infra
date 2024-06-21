@@ -7,6 +7,7 @@
     ./printing.nix
     ./jukebox.nix
     ./pipewire.nix
+    ./homebox.nix
     # inputs.tg-bot.nixosModule.x86_64-linux
     # ./wg.nix
   ];
