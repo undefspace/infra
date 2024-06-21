@@ -24,9 +24,15 @@
         domain = true;
         userServices = true;
       };
-   };
+    };
+
+    airsane = e // {
+      settings.debug = true;
+    };
 
   };
+
+  systemd.services.airsaned.environment.SANE_NET_HOSTS = "localhost";
 
   users.users.scanner.extraGroups = [ "lp" "avahi" ];
 

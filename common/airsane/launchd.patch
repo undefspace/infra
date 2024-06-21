@@ -1,0 +1,15 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 1a28933..c4af249 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -118,9 +118,6 @@ if(APPLE)
+ install(TARGETS ''${PROJECT_NAME}
+     RUNTIME DESTINATION sbin
+ )
+-install(FILES launchd/org.simulpiscator.airsaned.plist
+-    DESTINATION /Library/LaunchDaemons
+-)
+
+ install(CODE "
+     if(NOT EXISTS ${CMAKE_INSTALL_PREFIX}/etc/airsane/access.conf)
+
