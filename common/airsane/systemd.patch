@@ -1,0 +1,39 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 56a9105..0be1f5f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -188,34 +188,5 @@ else()
+ install(TARGETS ${PROJECT_NAME}
+     RUNTIME DESTINATION bin
+ )
+-configure_file(systemd/airsaned.service.in ${CMAKE_BINARY_DIR}/airsaned.service @ONLY)
+-install(FILES ${CMAKE_BINARY_DIR}/airsaned.service
+-    DESTINATION /lib/systemd/system
+-)
+-install(FILES systemd/airsaned.default
+-    DESTINATION /etc/default
+-    RENAME airsane
+-)
+-
+-install(CODE "
+-    if(NOT EXISTS /etc/airsane/access.conf)
+-        file(INSTALL ${CMAKE_SOURCE_DIR}/etc/access.conf DESTINATION /etc/airsane)
+-    endif()
+-")
+-install(CODE "
+-    if(NOT EXISTS /etc/airsane/ignore.conf)
+-        file(INSTALL ${CMAKE_SOURCE_DIR}/etc/ignore.conf DESTINATION /etc/airsane)
+-    endif()
+-")
+-install(CODE "
+-    if(NOT EXISTS /etc/airsane/options.conf)
+-        file(INSTALL ${CMAKE_SOURCE_DIR}/etc/options.conf DESTINATION /etc/airsane)
+-    endif()
+-")
+-install(CODE "
+-    if(NOT EXISTS /etc/airsane/Gnome-scanner.png)
+-        file(INSTALL ${CMAKE_SOURCE_DIR}/etc/Gnome-scanner.png DESTINATION /etc/airsane)
+-    endif()
+-")
+ 
+ endif()

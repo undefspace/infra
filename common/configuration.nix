@@ -1,5 +1,5 @@
 {lib, pkgs, ...}: {
-  imports = [ ./ssh.nix ];
+  imports = [ ./ssh.nix ./airsane ];
 
   time.timeZone = "Europe/Moscow";
   i18n.defaultLocale = "en_US.UTF-8";
