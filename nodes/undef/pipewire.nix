@@ -37,6 +37,7 @@ in {
             "context.properties" = {
               "log.level" = 2; # https://docs.pipewire.org/page_daemon.html
             };
+            "context.modules" = [ { name = "libpipewire-module-protocol-pulse"; } ];
           };
         };
       };
